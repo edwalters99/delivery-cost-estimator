@@ -12,7 +12,7 @@ function processInput(data) {
 
   packages.forEach((package) => {
     package = package.split(" ");
-    const [pkgID, pkgWeightInKg, pkgDistanceInKm] = package;
+    const [pkgID, pkgWeightInKg, pkgDistanceInKm, offerCode] = package;
     if (!pkgID || !pkgWeightInKg || !pkgDistanceInKm) {
       throw new Error("Input Data inconsistency");
     }
@@ -21,7 +21,8 @@ function processInput(data) {
       pkgID,
       Number(pkgWeightInKg),
       Number(pkgDistanceInKm),
-      baseDeliveryCost
+      baseDeliveryCost,
+      offerCode
     );
 
     if (!packagesObject[pkgID]) {

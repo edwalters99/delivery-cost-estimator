@@ -1,5 +1,6 @@
 const processInput = require("./processInput.js");
 
+
 // Make sure we got a filename on the command line.
 if (process.argv.length < 3) {
   console.log("Usage: node " + process.argv[1] + " FILENAME");
@@ -12,4 +13,5 @@ fs.readFile(filename, "utf8", function (err, data) {
   if (err) throw err;
   const packagesObject = processInput(data);
   console.log(packagesObject)
+
 });
