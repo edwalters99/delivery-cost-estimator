@@ -1,6 +1,10 @@
 const Package = require("./package");
 
 function processInput(data) {
+  if (!data) {
+    throw new Error("Missing Data");
+  }
+
   const lines = data.split(/\r?\n/);
   const baseDeliveryCost = Number(lines[0].split(" ")[0]);
   const noOfPackages = Number(lines[0].split(" ")[1]);
@@ -13,8 +17,16 @@ function processInput(data) {
   packagesRows.forEach((row) => {
     row = row.split(" ");
     const [pkgID, pkgWeightInKg, pkgDistanceInKm, offerCode] = row;
-    if (!pkgID || !pkgWeightInKg || !pkgDistanceInKm) {
-      throw new Error("Input Data incomplete");
+    if (
+      !pkgID ||
+      !pkgWeightInKg ||
+      isNaN(pkgWeightInKg) ||
+      pkgWeightInKg <=0 ||
+      !pkgDistanceInKm ||
+      isNaN(pkgDistanceInKm) ||
+      pkgDistanceInKm <= 0
+    ) {
+      throw new Error("Input Data incomplete / incorrect format");
     }
 
     const newPackage = new Package(
