@@ -4,17 +4,17 @@ function processInput(data) {
   const lines = data.split(/\r?\n/);
   const baseDeliveryCost = Number(lines[0].split(" ")[0]);
   const noOfPackages = Number(lines[0].split(" ")[1]);
-  const packages = lines.slice(1);
+  const packagesRows = lines.slice(1);
   const packagesObject = {};
-  if (noOfPackages !== packages.length) {
-    throw new Error("Input Data inconsistency");
+  if (noOfPackages !== packagesRows.length) {
+    throw new Error("Input Data inconsistency (number of packages)");
   }
 
-  packages.forEach((package) => {
-    package = package.split(" ");
-    const [pkgID, pkgWeightInKg, pkgDistanceInKm, offerCode] = package;
+  packagesRows.forEach((row) => {
+    row = row.split(" ");
+    const [pkgID, pkgWeightInKg, pkgDistanceInKm, offerCode] = row;
     if (!pkgID || !pkgWeightInKg || !pkgDistanceInKm) {
-      throw new Error("Input Data inconsistency");
+      throw new Error("Input Data incomplete");
     }
 
     const newPackage = new Package(
