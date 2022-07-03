@@ -1,5 +1,6 @@
-const processInput = require("./processInput.js");
-const processDiscount = require("./processDiscount.js");
+const processInput = require("./processInput");
+const processDiscount = require("./processDiscount");
+const processOutput = require("./processOutput")
 
 // Ensure filename is supplied from the command line
 if (process.argv.length < 3) {
@@ -13,12 +14,5 @@ fs.readFile(filename, "utf8", function (err, data) {
   if (err) throw err;
   const packagesObject = processInput(data);
   processDiscount(packagesObject);
-  let outputStr = "";
-  for (let p in packagesObject) {
-    // if (packagesObject[p].checkDiscountValid(offersData)) {
-    //   packagesObject[p].applyDiscount(offersData);
-    // }
-    outputStr += packagesObject[p].getSummary() + "\n";
-  }
-  process.stdout.write(outputStr);
+  process.stdout.write(processOutput(packagesObject));
 });

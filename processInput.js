@@ -9,7 +9,6 @@ function processInput(data) {
   if (noOfPackages !== packages.length) {
     throw new Error("Input Data inconsistency");
   }
- 
 
   packages.forEach((package) => {
     package = package.split(" ");
