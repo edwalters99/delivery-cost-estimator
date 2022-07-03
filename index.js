@@ -1,5 +1,5 @@
 const processInput = require("./processInput.js");
-const offersData = require("./offers.json");
+const processDiscount = require("./processDiscount.js");
 
 // Ensure filename is supplied from the command line
 if (process.argv.length < 3) {
@@ -12,12 +12,13 @@ const fs = require("fs"),
 fs.readFile(filename, "utf8", function (err, data) {
   if (err) throw err;
   const packagesObject = processInput(data);
+  processDiscount(packagesObject);
   let outputStr = "";
-  for (let pkg in packagesObject) {
-    if (packagesObject[pkg].checkDiscountValid(offersData)) {
-      packagesObject[pkg].applyDiscount(offersData);
-    }
-    outputStr += packagesObject[pkg].getSummary() + "\n";
+  for (let p in packagesObject) {
+    // if (packagesObject[p].checkDiscountValid(offersData)) {
+    //   packagesObject[p].applyDiscount(offersData);
+    // }
+    outputStr += packagesObject[p].getSummary() + "\n";
   }
   process.stdout.write(outputStr);
 });

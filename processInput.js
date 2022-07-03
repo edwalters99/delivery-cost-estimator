@@ -5,10 +5,11 @@ function processInput(data) {
   const baseDeliveryCost = Number(lines[0].split(" ")[0]);
   const noOfPackages = Number(lines[0].split(" ")[1]);
   const packages = lines.slice(1);
+  const packagesObject = {};
   if (noOfPackages !== packages.length) {
     throw new Error("Input Data inconsistency");
   }
-  const packagesObject = {};
+ 
 
   packages.forEach((package) => {
     package = package.split(" ");

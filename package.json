@@ -1,11 +1,11 @@
 {
-  "name": "discounts",
+  "name": "deliverycostestimator",
   "version": "1.0.0",
-  "description": "",
+  "description": "Delivery cost estimator for Kiki's courier service",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Ed Walters",
   "license": "ISC"
 }
