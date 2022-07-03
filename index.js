@@ -10,5 +10,6 @@ const fs = require("fs"),
   filename = process.argv[2];
 fs.readFile(filename, "utf8", function (err, data) {
   if (err) throw err;
-  processInput(data);
+  const packagesObject = processInput(data);
+  console.log(packagesObject)
 });

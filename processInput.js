@@ -1,5 +1,4 @@
 const Package = require("./package");
-const offersData = require("./offers.json");
 
 function processInput(data) {
   const lines = data.split(/\r?\n/);
@@ -9,26 +8,40 @@ function processInput(data) {
   if (noOfPackages !== packages.length) {
     throw new Error("Input Data inconsistency");
   }
+  const packagesObject = {};
 
   packages.forEach((package) => {
     package = package.split(" ");
-    const [pkgID, pkgWeightInKg, pkgDistanceInKm, offerCode] = package;
+    const [pkgID, pkgWeightInKg, pkgDistanceInKm] = package;
     if (!pkgID || !pkgWeightInKg || !pkgDistanceInKm) {
       throw new Error("Input Data inconsistency");
     }
-    let testPackage = new Package(
+
+    const newPackage = new Package(
       pkgID,
       Number(pkgWeightInKg),
       Number(pkgDistanceInKm),
       baseDeliveryCost
     );
+
+    if (!packagesObject[pkgID]) {
+      packagesObject[pkgID] = newPackage;
+    } else {
+      throw new Error("Duplicate package ID");
+    }
+
+    // if (newPackage.checkDiscountValid(offerCode, offersData)) {
+    //   newPackage.applyDiscount(offerCode, offersData);
+    // }
+
     // console.log(testPackage.getSummary());
     // console.log(testPackage.checkDiscountValid(offerCode, offersData))
 
-    if (testPackage.checkDiscountValid(offerCode, offersData)) {
-      testPackage.applyDiscount(offerCode, offersData);
-    }
+    // if (testPackage.checkDiscountValid(offerCode, offersData)) {
+    //   testPackage.applyDiscount(offerCode, offersData);
+    // }
   });
+  return packagesObject;
 }
 
 module.exports = processInput;
