@@ -1,0 +1,24 @@
+{
+    "OFR001": {
+      "discountPercent": 10,
+      "distanceMin": 0,
+      "distanceMax": 200,
+      "weightMin": 70,
+      "weightMax": 200
+    },
+    "OFR002": {
+      "discountPercent": 7,
+      "distanceMin": 50,
+      "distanceMax": 150,
+      "weightMin": 100,
+      "weightMax": 250
+    },
+    "OFR003": {
+      "discountPercent": 5,
+      "distanceMin": 50,
+      "distanceMax": 250,
+      "weightMin": 10,
+      "weightMax": 150
+    }
+  }
+  
