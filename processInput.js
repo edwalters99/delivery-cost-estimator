@@ -30,17 +30,6 @@ function processInput(data) {
     } else {
       throw new Error("Duplicate package ID");
     }
-
-    // if (newPackage.checkDiscountValid(offerCode, offersData)) {
-    //   newPackage.applyDiscount(offerCode, offersData);
-    // }
-
-    // console.log(testPackage.getSummary());
-    // console.log(testPackage.checkDiscountValid(offerCode, offersData))
-
-    // if (testPackage.checkDiscountValid(offerCode, offersData)) {
-    //   testPackage.applyDiscount(offerCode, offersData);
-    // }
   });
   return packagesObject;
 }

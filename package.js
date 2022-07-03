@@ -16,7 +16,7 @@ class Package {
   }
 
   checkDiscountValid(offersData) {
-    if (!offerCode || !offersData[offerCode] || this.discount !== 0) {
+    if (!this.offerCode || !offersData[this.offerCode] || this.discount !== 0) {
       return false;
     }
     if (
