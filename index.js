@@ -1,6 +1,7 @@
 const processInput = require("./processInput");
 const processDiscount = require("./processDiscount");
-const processOutput = require("./processOutput")
+const processOutput = require("./processOutput");
+const offersData = require("./offers.json");
 
 // Ensure filename is supplied from the command line
 if (process.argv.length < 3) {
@@ -13,6 +14,6 @@ const fs = require("fs"),
 fs.readFile(filename, "utf8", function (err, data) {
   if (err) throw err;
   const packagesObject = processInput(data);
-  processDiscount(packagesObject);
+  processDiscount(packagesObject, offersData);
   process.stdout.write(processOutput(packagesObject));
 });
