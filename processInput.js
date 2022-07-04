@@ -17,7 +17,7 @@ function processInput(data) {
   packagesRows.forEach((row) => {
     row = row.split(" ");
     const [pkgID, pkgWeightInKg, pkgDistanceInKm, offerCode] = row;
-    if (!offerCode) offerCode = null;
+
     if (
       !pkgID ||
       !pkgWeightInKg ||
@@ -35,7 +35,7 @@ function processInput(data) {
       Number(pkgWeightInKg),
       Number(pkgDistanceInKm),
       baseDeliveryCost,
-      offerCode
+      offerCode ? offerCode : null
     );
 
     if (!packagesObject[pkgID]) {
