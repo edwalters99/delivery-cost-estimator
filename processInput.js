@@ -17,11 +17,12 @@ function processInput(data) {
   packagesRows.forEach((row) => {
     row = row.split(" ");
     const [pkgID, pkgWeightInKg, pkgDistanceInKm, offerCode] = row;
+    if (!offerCode) offerCode = null;
     if (
       !pkgID ||
       !pkgWeightInKg ||
       isNaN(pkgWeightInKg) ||
-      pkgWeightInKg <=0 ||
+      pkgWeightInKg <= 0 ||
       !pkgDistanceInKm ||
       isNaN(pkgDistanceInKm) ||
       pkgDistanceInKm <= 0
