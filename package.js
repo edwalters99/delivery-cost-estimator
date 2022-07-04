@@ -24,6 +24,15 @@ class Package {
     this.#total = this.#totalExDiscount - this.#discount;
   }
 
+  // for testing purposes
+  getDiscount() {
+    return this.#discount;
+  }
+  // for testing purposes
+  getTotal() {
+    return this.#total;
+  }
+
   getSummary() {
     return `${this.#pkgID} ${this.#discount} ${this.#total}`;
   }
@@ -57,6 +66,7 @@ class Package {
       (this.#totalExDiscount * offersData[this.#offerCode]["discountPercent"]) /
       100;
     this.#total = this.#totalExDiscount - this.#discount;
+    return [this.#discount, this.#total]; // for testing purposes
   }
 }
 
