@@ -32,6 +32,10 @@ class Package {
   getTotal() {
     return this.#total;
   }
+  // for testing purposes
+  getPkgID() {
+      return this.#pkgID;
+  }
 
   getSummary() {
     return `${this.#pkgID} ${this.#discount} ${this.#total}`;
@@ -62,11 +66,13 @@ class Package {
   }
 
   applyDiscount(offersData) {
-    this.#discount =
-      (this.#totalExDiscount * offersData[this.#offerCode]["discountPercent"]) /
-      100;
-    this.#total = this.#totalExDiscount - this.#discount;
-    return [this.#discount, this.#total]; // for testing purposes
+    if (this.checkDiscountValid(offersData)) {
+      this.#discount =
+        (this.#totalExDiscount *
+          offersData[this.#offerCode]["discountPercent"]) /
+        100;
+      this.#total = this.#totalExDiscount - this.#discount;
+    }
   }
 }
 

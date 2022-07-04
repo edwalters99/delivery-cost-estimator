@@ -1,30 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1656852817644" clover="3.2.0">
-  <project timestamp="1656852817644" name="All files">
-    <metrics statements="39" coveredstatements="29" conditionals="28" coveredconditionals="15" methods="6" coveredmethods="3" elements="73" coveredelements="47" complexity="0" loc="39" ncloc="39" packages="1" files="2" classes="2"/>
+<coverage generated="1656937151136" clover="3.2.0">
+  <project timestamp="1656937151136" name="All files">
+    <metrics statements="43" coveredstatements="43" conditionals="32" coveredconditionals="32" methods="9" coveredmethods="9" elements="84" coveredelements="84" complexity="0" loc="43" ncloc="43" packages="1" files="2" classes="2"/>
     <file name="package.js" path="/Users/edwalters/Projects/delivery-cost-estimator/package.js">
-      <metrics statements="18" coveredstatements="8" conditionals="13" coveredconditionals="0" methods="4" coveredmethods="1"/>
-      <line num="17" count="20" type="stmt"/>
-      <line num="18" count="20" type="stmt"/>
-      <line num="19" count="20" type="stmt"/>
-      <line num="20" count="20" type="stmt"/>
-      <line num="21" count="20" type="stmt"/>
-      <line num="22" count="20" type="stmt"/>
-      <line num="24" count="20" type="stmt"/>
-      <line num="28" count="0" type="stmt"/>
-      <line num="32" count="0" type="cond" truecount="0" falsecount="2"/>
-      <line num="37" count="0" type="stmt"/>
-      <line num="39" count="0" type="cond" truecount="0" falsecount="2"/>
-      <line num="43" count="0" type="stmt"/>
-      <line num="45" count="0" type="cond" truecount="0" falsecount="2"/>
-      <line num="49" count="0" type="stmt"/>
-      <line num="52" count="0" type="stmt"/>
-      <line num="56" count="0" type="stmt"/>
-      <line num="59" count="0" type="stmt"/>
-      <line num="63" count="1" type="stmt"/>
+      <metrics statements="22" coveredstatements="22" conditionals="15" coveredconditionals="15" methods="7" coveredmethods="7"/>
+      <line num="17" count="37" type="stmt"/>
+      <line num="18" count="37" type="stmt"/>
+      <line num="19" count="37" type="stmt"/>
+      <line num="20" count="37" type="stmt"/>
+      <line num="21" count="37" type="stmt"/>
+      <line num="22" count="37" type="stmt"/>
+      <line num="24" count="37" type="stmt"/>
+      <line num="29" count="9" type="stmt"/>
+      <line num="33" count="2" type="stmt"/>
+      <line num="37" count="1" type="stmt"/>
+      <line num="41" count="5" type="stmt"/>
+      <line num="45" count="23" type="cond" truecount="2" falsecount="0"/>
+      <line num="50" count="7" type="stmt"/>
+      <line num="52" count="16" type="cond" truecount="2" falsecount="0"/>
+      <line num="56" count="9" type="stmt"/>
+      <line num="58" count="7" type="cond" truecount="2" falsecount="0"/>
+      <line num="62" count="3" type="stmt"/>
+      <line num="65" count="4" type="stmt"/>
+      <line num="69" count="11" type="cond" truecount="2" falsecount="0"/>
+      <line num="70" count="4" type="stmt"/>
+      <line num="74" count="4" type="stmt"/>
+      <line num="79" count="2" type="stmt"/>
     </file>
     <file name="processInput.js" path="/Users/edwalters/Projects/delivery-cost-estimator/processInput.js">
-      <metrics statements="21" coveredstatements="21" conditionals="15" coveredconditionals="15" methods="2" coveredmethods="2"/>
+      <metrics statements="21" coveredstatements="21" conditionals="17" coveredconditionals="17" methods="2" coveredmethods="2"/>
       <line num="1" count="1" type="stmt"/>
       <line num="4" count="12" type="cond" truecount="2" falsecount="0"/>
       <line num="5" count="1" type="stmt"/>
@@ -38,14 +42,14 @@
       <line num="17" count="10" type="stmt"/>
       <line num="18" count="26" type="stmt"/>
       <line num="19" count="26" type="stmt"/>
-      <line num="20" count="26" type="cond" truecount="2" falsecount="0"/>
-      <line num="29" count="6" type="stmt"/>
-      <line num="32" count="20" type="stmt"/>
-      <line num="40" count="20" type="cond" truecount="2" falsecount="0"/>
-      <line num="41" count="19" type="stmt"/>
-      <line num="43" count="1" type="stmt"/>
-      <line num="46" count="3" type="stmt"/>
-      <line num="49" count="1" type="stmt"/>
+      <line num="21" count="26" type="cond" truecount="2" falsecount="0"/>
+      <line num="30" count="6" type="stmt"/>
+      <line num="33" count="20" type="stmt"/>
+      <line num="41" count="20" type="cond" truecount="2" falsecount="0"/>
+      <line num="42" count="19" type="stmt"/>
+      <line num="44" count="1" type="stmt"/>
+      <line num="47" count="3" type="stmt"/>
+      <line num="50" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>
