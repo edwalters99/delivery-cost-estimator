@@ -96,16 +96,15 @@ describe("Package", () => {
 
   test("applyDiscount(offersData) sets this.#total correctly when offerCode is invalid", () => {
     const pkg = new Package(
-        "PKG2", // pkgID,
-        71, //   pkgWeightInKg,
-        199, //   pkgDistanceInKm,
-        100, //   baseDeliveryCost,
-        "XXXXXXX" //   offerCode
-      );
+      "PKG2", // pkgID,
+      71, //   pkgWeightInKg,
+      199, //   pkgDistanceInKm,
+      100, //   baseDeliveryCost,
+      "XXXXXXX" //   offerCode
+    );
     pkg.applyDiscount(offersData);
     expect(pkg.getTotal()).toBe(1805);
   });
-
 
   test("applyDiscount(offersData) sets this.#discount to 0 when offerCode is null", () => {
     const pkg = new Package(

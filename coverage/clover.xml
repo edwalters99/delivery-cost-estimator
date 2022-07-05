@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1656938807718" clover="3.2.0">
-  <project timestamp="1656938807718" name="All files">
-    <metrics statements="48" coveredstatements="48" conditionals="32" coveredconditionals="32" methods="10" coveredmethods="10" elements="90" coveredelements="90" complexity="0" loc="48" ncloc="48" packages="1" files="3" classes="3"/>
+<coverage generated="1656997740112" clover="3.2.0">
+  <project timestamp="1656997740112" name="All files">
+    <metrics statements="50" coveredstatements="50" conditionals="34" coveredconditionals="34" methods="10" coveredmethods="10" elements="94" coveredelements="94" complexity="0" loc="50" ncloc="50" packages="1" files="3" classes="3"/>
     <file name="package.js" path="/Users/edwalters/Projects/delivery-cost-estimator/package.js">
       <metrics statements="22" coveredstatements="22" conditionals="15" coveredconditionals="15" methods="7" coveredmethods="7"/>
       <line num="17" count="40" type="stmt"/>
@@ -52,12 +52,14 @@
       <line num="50" count="1" type="stmt"/>
     </file>
     <file name="processOutput.js" path="/Users/edwalters/Projects/delivery-cost-estimator/processOutput.js">
-      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <line num="2" count="3" type="stmt"/>
-      <line num="3" count="3" type="stmt"/>
-      <line num="4" count="6" type="stmt"/>
-      <line num="6" count="3" type="stmt"/>
-      <line num="9" count="1" type="stmt"/>
+      <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <line num="2" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="7" count="2" type="stmt"/>
+      <line num="8" count="2" type="stmt"/>
+      <line num="9" count="6" type="stmt"/>
+      <line num="11" count="2" type="stmt"/>
+      <line num="14" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>

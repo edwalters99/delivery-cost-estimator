@@ -38,8 +38,12 @@ describe("processOutput", () => {
     expect(output.split("\n")[1]).toEqual("PKG2 0 650");
     expect(output.split("\n")[2]).toEqual("PKG3 0 620");
   });
-  it("returns an empty string when packagesObject is undefined", () => {
-    const output = processOutput(undefined);
-    expect(output).toEqual("");
+  it("throws an error if packagesObject is undefined", () => {
+    function packagesObjectUnd() {
+      processOutput(undefined);
+    }
+    expect(packagesObjectUnd).toThrowError(
+      "PackagesObject unavailable. Unable to process output String"
+    );
   });
 });
