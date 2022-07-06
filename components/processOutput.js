@@ -1,13 +1,14 @@
 function processOutput(packagesObject) {
   if (!packagesObject) {
     throw new Error(
-      "PackagesObject unavailable. Unable to process output String"
+      'PackagesObject unavailable. Unable to process output String',
     );
   }
-  let outputStr = "";
-  for (let p in packagesObject) {
-    outputStr += packagesObject[p].getSummary() + "\n";
-  }
+  let outputStr = '';
+  Object.keys(packagesObject).forEach((key) => {
+    outputStr += `${packagesObject[key].getSummary()}\n`;
+  });
+
   return outputStr;
 }
 

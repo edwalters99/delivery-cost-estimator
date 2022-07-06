@@ -1,13 +1,20 @@
-const NP = require("number-precision");
+const NP = require('number-precision');
+
 NP.enableBoundaryChecking(false);
 
 class Package {
   #pkgID;
+
   #pkgWeightInKg;
+
   #pkgDistanceInKm;
+
   #offerCode;
+
   #discount;
+
   #totalExDiscount;
+
   #total;
 
   constructor(
@@ -15,7 +22,7 @@ class Package {
     pkgWeightInKg,
     pkgDistanceInKm,
     baseDeliveryCost,
-    offerCode
+    offerCode,
   ) {
     this.#pkgID = pkgID;
     this.#pkgWeightInKg = pkgWeightInKg;
@@ -27,7 +34,7 @@ class Package {
     this.#totalExDiscount = NP.plus(
       pkgWeightCost,
       pkgDistanceCost,
-      baseDeliveryCost
+      baseDeliveryCost,
     );
     this.#total = NP.minus(this.#totalExDiscount, this.#discount);
   }
@@ -36,10 +43,12 @@ class Package {
   getDiscount() {
     return this.#discount;
   }
+
   // for testing purposes
   getTotal() {
     return this.#total;
   }
+
   // for testing purposes
   getPkgID() {
     return this.#pkgID;
@@ -48,27 +57,27 @@ class Package {
   getSummary() {
     return `${this.#pkgID} ${NP.round(this.#discount, 2)} ${NP.round(
       this.#total,
-      2
+      2,
     )}`;
   }
 
   checkDiscountValid(offersData) {
     if (
-      !this.#offerCode ||
-      !offersData[this.#offerCode] ||
-      this.#discount !== 0
+      !this.#offerCode
+      || !offersData[this.#offerCode]
+      || this.#discount !== 0
     ) {
       return false;
     }
     if (
-      offersData[this.#offerCode]["distanceMin"] > this.#pkgDistanceInKm ||
-      offersData[this.#offerCode]["distanceMax"] < this.#pkgDistanceInKm
+      offersData[this.#offerCode].distanceMin > this.#pkgDistanceInKm
+      || offersData[this.#offerCode].distanceMax < this.#pkgDistanceInKm
     ) {
       return false;
     }
     if (
-      offersData[this.#offerCode]["weightMin"] > this.#pkgWeightInKg ||
-      offersData[this.#offerCode]["weightMax"] < this.#pkgWeightInKg
+      offersData[this.#offerCode].weightMin > this.#pkgWeightInKg
+      || offersData[this.#offerCode].weightMax < this.#pkgWeightInKg
     ) {
       return false;
     }
@@ -79,8 +88,8 @@ class Package {
   applyDiscount(offersData) {
     if (this.checkDiscountValid(offersData)) {
       const discountDecimal = NP.divide(
-        offersData[this.#offerCode]["discountPercent"],
-        100
+        offersData[this.#offerCode].discountPercent,
+        100,
       );
       this.#discount = NP.times(this.#totalExDiscount, discountDecimal);
       this.#total = NP.minus(this.#totalExDiscount, this.#discount);

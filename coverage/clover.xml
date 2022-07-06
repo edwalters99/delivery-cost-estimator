@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1657085084016" clover="3.2.0">
-  <project timestamp="1657085084016" name="All files">
-    <metrics statements="63" coveredstatements="63" conditionals="40" coveredconditionals="40" methods="11" coveredmethods="11" elements="114" coveredelements="114" complexity="0" loc="63" ncloc="63" packages="1" files="4" classes="4"/>
+<coverage generated="1657114369399" clover="3.2.0">
+  <project timestamp="1657114369399" name="All files">
+    <metrics statements="63" coveredstatements="63" conditionals="40" coveredconditionals="40" methods="13" coveredmethods="13" elements="116" coveredelements="116" complexity="0" loc="63" ncloc="63" packages="1" files="4" classes="4"/>
     <file name="package.js" path="/Users/edwalters/Projects/delivery-cost-estimator/components/package.js">
       <metrics statements="27" coveredstatements="27" conditionals="15" coveredconditionals="15" methods="7" coveredmethods="7"/>
       <line num="1" count="2" type="stmt"/>
-      <line num="2" count="2" type="stmt"/>
-      <line num="20" count="39" type="stmt"/>
-      <line num="21" count="39" type="stmt"/>
-      <line num="22" count="39" type="stmt"/>
-      <line num="23" count="39" type="stmt"/>
-      <line num="24" count="39" type="stmt"/>
-      <line num="25" count="39" type="stmt"/>
-      <line num="26" count="39" type="stmt"/>
+      <line num="3" count="2" type="stmt"/>
       <line num="27" count="39" type="stmt"/>
+      <line num="28" count="39" type="stmt"/>
+      <line num="29" count="39" type="stmt"/>
+      <line num="30" count="39" type="stmt"/>
+      <line num="31" count="39" type="stmt"/>
       <line num="32" count="39" type="stmt"/>
-      <line num="37" count="10" type="stmt"/>
-      <line num="41" count="3" type="stmt"/>
-      <line num="45" count="1" type="stmt"/>
-      <line num="49" count="5" type="stmt"/>
-      <line num="56" count="25" type="cond" truecount="2" falsecount="0"/>
-      <line num="61" count="7" type="stmt"/>
-      <line num="63" count="18" type="cond" truecount="2" falsecount="0"/>
-      <line num="67" count="9" type="stmt"/>
-      <line num="69" count="9" type="cond" truecount="2" falsecount="0"/>
-      <line num="73" count="3" type="stmt"/>
-      <line num="76" count="6" type="stmt"/>
-      <line num="80" count="13" type="cond" truecount="2" falsecount="0"/>
-      <line num="81" count="6" type="stmt"/>
+      <line num="33" count="39" type="stmt"/>
+      <line num="34" count="39" type="stmt"/>
+      <line num="39" count="39" type="stmt"/>
+      <line num="44" count="10" type="stmt"/>
+      <line num="49" count="3" type="stmt"/>
+      <line num="54" count="1" type="stmt"/>
+      <line num="58" count="5" type="stmt"/>
+      <line num="65" count="25" type="cond" truecount="2" falsecount="0"/>
+      <line num="70" count="7" type="stmt"/>
+      <line num="72" count="18" type="cond" truecount="2" falsecount="0"/>
+      <line num="76" count="9" type="stmt"/>
+      <line num="78" count="9" type="cond" truecount="2" falsecount="0"/>
+      <line num="82" count="3" type="stmt"/>
       <line num="85" count="6" type="stmt"/>
-      <line num="86" count="6" type="stmt"/>
-      <line num="91" count="2" type="stmt"/>
+      <line num="89" count="13" type="cond" truecount="2" falsecount="0"/>
+      <line num="90" count="6" type="stmt"/>
+      <line num="94" count="6" type="stmt"/>
+      <line num="95" count="6" type="stmt"/>
+      <line num="100" count="2" type="stmt"/>
     </file>
     <file name="processDiscount.js" path="/Users/edwalters/Projects/delivery-cost-estimator/components/processDiscount.js">
-      <metrics statements="8" coveredstatements="8" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
+      <metrics statements="8" coveredstatements="8" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="2"/>
       <line num="2" count="3" type="cond" truecount="2" falsecount="0"/>
       <line num="3" count="1" type="stmt"/>
       <line num="5" count="2" type="cond" truecount="2" falsecount="0"/>
@@ -68,14 +68,14 @@
       <line num="50" count="1" type="stmt"/>
     </file>
     <file name="processOutput.js" path="/Users/edwalters/Projects/delivery-cost-estimator/components/processOutput.js">
-      <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
       <line num="2" count="3" type="cond" truecount="2" falsecount="0"/>
       <line num="3" count="1" type="stmt"/>
       <line num="7" count="2" type="stmt"/>
       <line num="8" count="2" type="stmt"/>
       <line num="9" count="6" type="stmt"/>
-      <line num="11" count="2" type="stmt"/>
-      <line num="14" count="1" type="stmt"/>
+      <line num="12" count="2" type="stmt"/>
+      <line num="15" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>

@@ -1,27 +1,28 @@
-const processDiscount = require("./processDiscount");
-const Package = require("./package");
-jest.mock("./package");
+const processDiscount = require('./processDiscount');
+const Package = require('./package');
+
+jest.mock('./package');
 
 const pkg1 = new Package(
-  "PKG1", // pkgID,
+  'PKG1', // pkgID,
   5, //   pkgWeightInKg,
   5, //   pkgDistanceInKm,
   100, //   baseDeliveryCost,
-  "OFR001" //   offerCode
+  'OFR001', //   offerCode
 );
 const pkg2 = new Package(
-  "PKG2", // pkgID,
+  'PKG2', // pkgID,
   15, //   pkgWeightInKg,
   5, //   pkgDistanceInKm,
   100, //   baseDeliveryCost,
-  "OFR002" //   offerCode
+  'OFR002', //   offerCode
 );
 const pkg3 = new Package(
-  "PKG3", // pkgID,
+  'PKG3', // pkgID,
   10, //   pkgWeightInKg,
   100, //   pkgDistanceInKm,
   100, //   baseDeliveryCost,
-  "OFR003" //   offerCode
+  'OFR003', //   offerCode
 );
 
 const packagesObject = { PKG1: pkg1, PKG2: pkg2, PKG3: pkg3 };
@@ -50,28 +51,28 @@ const offersData = {
   },
 };
 
-describe("processDiscount", () => {
-  it("throws an error if packagesObject is undefined", () => {
+describe('processDiscount', () => {
+  it('throws an error if packagesObject is undefined', () => {
     function packagesObjectUnd() {
       processDiscount(undefined, offersData);
     }
     expect(packagesObjectUnd).toThrowError(
-      "PackagesObject unavailable. Unable to process discount"
+      'PackagesObject unavailable. Unable to process discount'
     );
   });
-  it("throws an error if offersData is undefined", () => {
+  it('throws an error if offersData is undefined', () => {
     function offersDataUnd() {
       processDiscount(packagesObject, undefined);
     }
     expect(offersDataUnd).toThrowError(
-      "offersData unavailable. Unable to process discount"
+      'offersData unavailable. Unable to process discount'
     );
   });
-  it("modifies this.#discount in Package object", () => {
-    expect(packagesObject["PKG1"].getDiscount()).toBe(0);
-    expect(packagesObject["PKG3"].getDiscount()).toBe(0);
+  it('modifies this.#discount in Package object', () => {
+    expect(packagesObject['PKG1'].getDiscount()).toBe(0);
+    expect(packagesObject['PKG3'].getDiscount()).toBe(0);
     processDiscount(packagesObject, offersData);
-    expect(packagesObject["PKG1"].getDiscount()).toBe(0);
-    expect(packagesObject["PKG3"].getDiscount()).toBe(35);
+    expect(packagesObject['PKG1'].getDiscount()).toBe(0);
+    expect(packagesObject['PKG3'].getDiscount()).toBe(35);
   });
 });
