@@ -55,10 +55,22 @@ class Package {
   }
 
   getSummary() {
-    return `${this.#pkgID} ${NP.round(this.#discount, 2)} ${NP.round(
-      this.#total,
-      2,
-    )}`;
+    const roundedDiscount = NP.round(this.#discount, 2);
+    const roundedTotal = NP.round(this.#total, 2);
+    let discountStr;
+    let totalStr;
+    if (roundedDiscount % 1 === 0) {
+      discountStr = String(roundedDiscount);
+    } else {
+      discountStr = roundedDiscount.toFixed(2);
+    }
+    if (roundedTotal % 1 === 0) {
+      totalStr = String(roundedTotal);
+    } else {
+      totalStr = roundedTotal.toFixed(2);
+    }
+
+    return `${this.#pkgID} ${discountStr} ${totalStr}`;
   }
 
   checkDiscountValid(offersData) {
