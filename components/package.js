@@ -1,4 +1,6 @@
 const NP = require("number-precision");
+NP.enableBoundaryChecking(false);
+
 class Package {
   #pkgID;
   #pkgWeightInKg;

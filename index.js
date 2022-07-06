@@ -1,6 +1,6 @@
-const processInput = require("./processInput");
-const processDiscount = require("./processDiscount");
-const processOutput = require("./processOutput");
+const processInput = require("./components/processInput");
+const processDiscount = require("./components/processDiscount");
+const processOutput = require("./components/processOutput");
 const offersData = require("./offers.json");
 
 // Ensure filename is supplied from the command line

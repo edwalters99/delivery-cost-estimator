@@ -1,5 +1,6 @@
 const processOutput = require("./processOutput");
 const Package = require("./package");
+jest.mock("./package");
 
 const pkg1 = new Package(
   "PKG1", // pkgID,

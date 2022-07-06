@@ -1,5 +1,6 @@
 const processDiscount = require("./processDiscount");
 const Package = require("./package");
+jest.mock("./package");
 
 const pkg1 = new Package(
   "PKG1", // pkgID,
