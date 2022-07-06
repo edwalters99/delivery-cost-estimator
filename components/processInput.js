@@ -30,6 +30,10 @@ function processInput(data) {
       throw new Error('Input Data incomplete / incorrect format');
     }
 
+    if (rowArray.length > 4) {
+      throw new Error('Input Data inconsistency (Only one discount code can be supplied per package)');
+    }
+
     const newPackage = new Package(
       pkgID,
       Number(pkgWeightInKg),
