@@ -2,7 +2,7 @@
     "OFR001": {
       "discountPercent": 10,
       "distanceMin": 0,
-      "distanceMax": 200,
+      "distanceMax": 199,
       "weightMin": 70,
       "weightMax": 200
     },

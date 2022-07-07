@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1657164144630" clover="3.2.0">
-  <project timestamp="1657164144630" name="All files">
-    <metrics statements="72" coveredstatements="72" conditionals="44" coveredconditionals="44" methods="13" coveredmethods="13" elements="129" coveredelements="129" complexity="0" loc="72" ncloc="72" packages="1" files="4" classes="4"/>
+<coverage generated="1657166025344" clover="3.2.0">
+  <project timestamp="1657166025344" name="All files">
+    <metrics statements="73" coveredstatements="73" conditionals="46" coveredconditionals="46" methods="13" coveredmethods="13" elements="132" coveredelements="132" complexity="0" loc="73" ncloc="73" packages="1" files="4" classes="4"/>
     <file name="package.js" path="/Users/edwalters/Projects/delivery-cost-estimator/components/package.js">
       <metrics statements="35" coveredstatements="35" conditionals="19" coveredconditionals="19" methods="7" coveredmethods="7"/>
       <line num="1" count="2" type="stmt"/>
@@ -41,13 +41,14 @@
       <line num="112" count="2" type="stmt"/>
     </file>
     <file name="processDiscount.js" path="/Users/edwalters/Projects/delivery-cost-estimator/components/processDiscount.js">
-      <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+      <metrics statements="8" coveredstatements="8" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="2"/>
       <line num="2" count="3" type="cond" truecount="2" falsecount="0"/>
       <line num="3" count="1" type="stmt"/>
       <line num="5" count="2" type="cond" truecount="2" falsecount="0"/>
       <line num="6" count="1" type="stmt"/>
       <line num="8" count="1" type="stmt"/>
-      <line num="10" count="3" type="stmt"/>
+      <line num="9" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="10" count="1" type="stmt"/>
       <line num="15" count="1" type="stmt"/>
     </file>
     <file name="processInput.js" path="/Users/edwalters/Projects/delivery-cost-estimator/components/processInput.js">

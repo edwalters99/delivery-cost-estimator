@@ -69,7 +69,7 @@ To run unit test suites
 ### JSON expected format
 - `distanceMin` and `distanceMax` are in km 
 - `weightMin` and `weightMax` are in kg
-![Offers JSON format](./readme_screenshots/offers_json_format.jpg)
+![Offers JSON format](./readme_screenshots/offers_json_format1.jpg)
 
 ---------------------------------------------------------------
 
