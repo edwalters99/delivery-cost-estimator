@@ -65,6 +65,35 @@ describe('Package', () => {
     expect(Number(p.getSummary().split(' ')[2])).toBeGreaterThanOrEqual(0);
   });
 
+  test('getSummary() displays discount with one decimal place correctly e.g. 180.5 to 180.50', () => {
+    const pkg = new Package(
+      'PKG2', // pkgID,
+      71, //   pkgWeightInKg,
+      199, //   pkgDistanceInKm,
+      100, //   baseDeliveryCost,
+      'OFR001', //   offerCode
+    );
+    pkg.applyDiscount(offersData);
+    expect(pkg.getSummary().split(' ')[1]).toBe('180.50');
+  });
+
+  test('getSummary() displays discount with multiple decimal places correctly e.g. 100.1042 to 100.10', () => {
+    const pkg = new Package(
+      'PKG2', // pkgID,
+      102.56, //   pkgWeightInKg,
+      59.74, //   pkgDistanceInKm,
+      105.76, //   baseDeliveryCost,
+      'OFR002', //   offerCode
+    );
+    pkg.applyDiscount(offersData);
+    expect(pkg.getSummary().split(' ')[1]).toBe('100.10');
+  });
+
+  test('getSummary() displays integer discount correctly (e.g. 35 remains 35 not 35.00)', () => {
+    p.applyDiscount(offersData);
+    expect(p.getSummary().split(' ')[1]).toBe('35');
+  });
+
   test('applyDiscount(offersData) sets this.#discount correctly when offerCode is valid (test1)', () => {
     p.applyDiscount(offersData);
     expect(p.getDiscount()).toBe(35);

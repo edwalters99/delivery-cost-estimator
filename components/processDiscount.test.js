@@ -57,7 +57,7 @@ describe('processDiscount', () => {
       processDiscount(undefined, offersData);
     }
     expect(packagesObjectUnd).toThrowError(
-      'PackagesObject unavailable. Unable to process discount'
+      'PackagesObject unavailable. Unable to process discount',
     );
   });
   it('throws an error if offersData is undefined', () => {
@@ -65,7 +65,7 @@ describe('processDiscount', () => {
       processDiscount(packagesObject, undefined);
     }
     expect(offersDataUnd).toThrowError(
-      'offersData unavailable. Unable to process discount'
+      'offersData unavailable. Unable to process discount',
     );
   });
   it('modifies this.#discount in Package object', () => {
