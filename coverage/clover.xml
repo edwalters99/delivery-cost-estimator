@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1657166025344" clover="3.2.0">
-  <project timestamp="1657166025344" name="All files">
+<coverage generated="1657166256235" clover="3.2.0">
+  <project timestamp="1657166256236" name="All files">
     <metrics statements="73" coveredstatements="73" conditionals="46" coveredconditionals="46" methods="13" coveredmethods="13" elements="132" coveredelements="132" complexity="0" loc="73" ncloc="73" packages="1" files="4" classes="4"/>
     <file name="package.js" path="/Users/edwalters/Projects/delivery-cost-estimator/components/package.js">
       <metrics statements="35" coveredstatements="35" conditionals="19" coveredconditionals="19" methods="7" coveredmethods="7"/>

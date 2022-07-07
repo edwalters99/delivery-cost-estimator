@@ -38,7 +38,7 @@ To run unit test suites
 
 ### Assumptions
 
-- It is acceptable for this MVP to use a JSON file for offers data (easily extendable for new offers). Later this would likely be handled by calling a database or an external API.
+- It is acceptable for this MVP to use a JSON file for offers data (easily extensible for new offers). Later this would likely be handled by calling a database or an external API.
 
 - It is acceptable to parse a text file as input instead of passing a string to STDIN. The program could easily be modified to accept a string to STDIN instead.
 
@@ -98,7 +98,7 @@ Calls the getSummary method on each package and returns an output string to inde
 Has checkDiscountValid, applyDiscount and getSummary methods as listed above. Also has getDiscount, getTotal and getPkgID for testing purposes.
 
 
-I got a MVP version of the product working, then integrated unit testing which prompted me to think about and handle the many edge cases. I refactored and reformatted code/file structure. Finally created documentation/README.
+I got a MVP version of the product working, then integrated unit testing which prompted me to think about and handle the many edge cases. I refactored and reformatted code/file structure. Finally I created documentation / README.
 
 ---------------------------------------------------------------
 
