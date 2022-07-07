@@ -62,7 +62,7 @@ class Package {
     if (roundedDiscount % 1 === 0) {
       discountStr = String(roundedDiscount);
     } else {
-      discountStr = roundedDiscount.toFixed(2);
+      discountStr = roundedDiscount.toFixed(2); // forces two decimal points only if not an integer
     }
     if (roundedTotal % 1 === 0) {
       totalStr = String(roundedTotal);
@@ -98,7 +98,7 @@ class Package {
   }
 
   applyDiscount(offersData) {
-    if (this.checkDiscountValid(offersData)) {
+    if (this.checkDiscountValid(offersData)) { // already checked in processDiscount - failsafe
       const discountDecimal = NP.divide(
         offersData[this.#offerCode].discountPercent,
         100,
