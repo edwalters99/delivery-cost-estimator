@@ -98,7 +98,7 @@ Calls the getSummary method on each package and returns an output string to inde
 Has checkDiscountValid, applyDiscount and getSummary methods as listed above. Also has getDiscount, getTotal and getPkgID for testing purposes.
 
 
-I got a MVP version of the product working, then integrated unit testing which prompted me to think about and handle the many edge cases. I refactored and reformatted code/file structure. Finally I created documentation / README.
+I got a MVP version of the product working before integrating unit testing which prompted me to think about and handle the many edge cases. I refactored and reformatted the code and file structure. Finally I created README documentation.
 
 ---------------------------------------------------------------
 
